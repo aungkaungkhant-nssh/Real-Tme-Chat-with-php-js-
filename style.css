@@ -96,6 +96,10 @@ form .name-details .field:last-child{
     transform: translateX(-60%);
     cursor: pointer;
 }
+.form form .field i.active::before{
+    color:#333;
+    content: "\f070";
+}
 .users{
     padding:25px 30px;
 }
