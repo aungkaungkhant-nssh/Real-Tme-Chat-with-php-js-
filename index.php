@@ -43,7 +43,7 @@
                 
             </form>
             <div class="link">
-                Already signed Up? <a href="">Login Now</a>
+                Already signed Up? <a href="/login.php">Login Now</a>
             </div>
         </section>
     </div>

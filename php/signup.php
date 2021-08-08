@@ -4,7 +4,8 @@ include_once("db.php");
 $fname=$_POST["fname"];
 $lname=$_POST["lname"];
 $email=$_POST["email"];
-$password=$_POST["password"];
+       
+$password= password_hash($_POST["password"],PASSWORD_BCRYPT);
 
 /// check the field
 if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
