@@ -28,84 +28,8 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="users-list">
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="content">
-                        <img src="./images.png" alt="">
-                        <div class="details">
-                            <span>Coding Myanmar</span>
-                            <p>This is test message</p>
-                        </div>
-                       
-                    </div>
-                    <div class="status-dot">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
+                
+              
             </div>
         </section>
     </div>
