@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Time Chat App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
+<?php
+    session_start();
+    if(!isset($_SESSION["unique_id"])){
+        header("Location: login.php");
+        exit();
+    }
+    include_once("./php/db.php");
+    $user=getOne("select * from users where unique_id=?",[$_GET['user_id']]);
+    include_once("./partials/header.php")
+?>
     <div class="wrapper">
         <section class="chat-area">
             <header>
                 
-                    <img src="./images.png" alt="">
+                    <img src="./php/images/<?=$user->image?>" alt="">
                     <div class="details">
-                        <span>Conding Myanmar</span>
-                        <p>Active Now</p>
+                        <span><?=$user->fname." ".$user->lname?></span>
+                        <p><?= $user->status?></p>
                     </div>
             
     
