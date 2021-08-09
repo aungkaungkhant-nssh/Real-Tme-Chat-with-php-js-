@@ -6,7 +6,25 @@ searchBtn.addEventListener("click",()=>{
     searchBar.focus()
     searchBtn.classList.toggle("active")
 })
-
+searchBar.addEventListener("keyup",()=>{
+    let searchTerm=searchBar.value;
+    fetch("php/search.php",{
+        method:"POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;',
+          },
+        body:'searchTerm='+searchTerm
+    })
+    .then((response)=>{
+       return response.text();
+    })
+    .then((data)=>{
+       userLists.innerHTML=data;
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+})
 setInterval(() => {
     fetch("php/users.php")
     .then((response)=>{

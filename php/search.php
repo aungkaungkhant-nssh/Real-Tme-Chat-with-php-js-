@@ -1,13 +1,12 @@
 <?php
-
-
-
 include_once("./db.php");
-$users=getAll("select * from users");
+$searchTerm=$_POST["searchTerm"];
+ 
 $output="";
-if(count($users)===1){
-    $output.="No message available to chat";
-}else{
+$users=getAll("select * from users where fname like '%{$searchTerm}%' OR
+lname like '%{$searchTerm}%'");
+
+if($users){
     foreach($users as $user){
      
         $output.='
@@ -26,6 +25,7 @@ if(count($users)===1){
         </a>
         ';
     }
-   
+}else{
+    $output="No user found related to your search Item";
 }
 echo $output;
