@@ -6,12 +6,13 @@
     }
     include_once("./php/db.php");
     $user=getOne("select * from users where unique_id=?",[$_GET['user_id']]);
-    include_once("./partials/header.php")
+    include_once("./partials/header.php");;
+   
 ?>
     <div class="wrapper">
         <section class="chat-area">
             <header>
-                
+                    <a href="./users.php">b</a>
                     <img src="./php/images/<?=$user->image?>" alt="">
                     <div class="details">
                         <span><?=$user->fname." ".$user->lname?></span>
@@ -21,66 +22,12 @@
     
             </header>
             <div class="chat-box">
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat incomming">
-                    <img src="./images.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat incomming">
-                    <img src="./images.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat incomming">
-                    <img src="./images.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat incomming">
-                    <img src="./images.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </div>
-                </div>
-                <div class="chat incomming">
-                    <img src="./images.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
+              
 
             </div>
             <form action="" class="typing-area">
-                <input type="text" value="<?=$_SESSION["unique_id"]?>" id="outgoing">
-                <input type="text" value="<?=$_GET["user_id"]?>" id="incomming">
+                <input type="text" value="<?=$_SESSION["unique_id"]?>" id="outgoing" hidden >
+                <input type="text" value="<?=$_GET["user_id"]?>" id="incomming" hidden >
                 <input type="text" placeholder="Type a message here..." id="messages">
                 <button>s</button>
             </form>

@@ -7,6 +7,7 @@ if($_SESSION["unique_id"]){
     $incomming=$_POST["incomming"];
     if(!empty($message)){
        insertData("insert into messages (message,outgoing_id,incomming_id) values(?,?,?)",[$message,$outgoing,$incomming]);
+       
     }
 }else{
     header("Location: login.php");
