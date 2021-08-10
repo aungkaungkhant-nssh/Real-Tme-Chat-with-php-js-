@@ -79,10 +79,13 @@
 
             </div>
             <form action="" class="typing-area">
-                <input type="text" placeholder="Type a message here...">
-                <button><i class="fab fa-telegram-plane"></i></button>
+                <input type="text" value="<?=$_SESSION["unique_id"]?>" id="outgoing">
+                <input type="text" value="<?=$_GET["user_id"]?>" id="incomming">
+                <input type="text" placeholder="Type a message here..." id="messages">
+                <button>s</button>
             </form>
         </section>
     </div>
+    <script src="./javascript/chat.js"></script>
 </body>
 </html>
