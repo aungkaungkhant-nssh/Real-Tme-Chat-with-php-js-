@@ -8,6 +8,9 @@ searchBtn.addEventListener("click",()=>{
 })
 searchBar.addEventListener("keyup",()=>{
     let searchTerm=searchBar.value;
+    if(searchTerm !=""){
+        searchBar.classList.add("active");
+    }
     fetch("php/search.php",{
         method:"POST",
         headers: {
@@ -31,7 +34,10 @@ setInterval(() => {
         return response.text();
     })
     .then((data)=>{
-        userLists.innerHTML=data
+        if(!searchBar.classList.contains("active")){
+            userLists.innerHTML=data
+        }
+        
       
     })
 }, 5000);
