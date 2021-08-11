@@ -19,6 +19,7 @@ foreach($users as $user){
     (strlen($msg)>20)?$msg=substr($msg,0,10).'....':$msg;
     
     ($_SESSION['unique_id']===$messages->outgoing_id)?$you="You":$you="";
+    ($user->status==="Offline Now")?$offline="offline":$offline="";
     if($user->unique_id!==$_SESSION["unique_id"]){
         $output.='
     <a href="./chat.php?user_id='.$user->unique_id.'">
@@ -30,7 +31,7 @@ foreach($users as $user){
         </div>
        
     </div>
-    <div class="status-dot">
+    <div class="status-dot '.$offline.'">
         <i class="fas fa-circle"></i>
     </div>
     </a>

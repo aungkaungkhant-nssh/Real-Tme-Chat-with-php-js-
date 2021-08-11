@@ -28,7 +28,12 @@ sendMessage.addEventListener("click",()=>{
         console.log(error)
     })
 })
-
+chatbox.addEventListener("mouseover",()=>{
+    chatbox.classList.add("active")
+})
+chatbox.addEventListener("mouseleave",()=>{
+    chatbox.classList.remove("active")
+})
 ///get Message
 setInterval(() => {
     fetch("./php/getMessage.php",{
@@ -44,7 +49,10 @@ setInterval(() => {
     .then((data)=>{
     
         chatbox.innerHTML=data;
-        scrollToBottom()
+        if(!chatbox.classList.contains("active")){
+            scrollToBottom()
+        }
+       
         
     })
     .catch((error)=>{
