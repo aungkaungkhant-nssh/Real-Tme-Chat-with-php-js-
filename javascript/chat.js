@@ -42,14 +42,19 @@ setInterval(() => {
         return response.text();
     })
     .then((data)=>{
+    
         chatbox.innerHTML=data;
-    //    console.log(data)
+        scrollToBottom()
+        
     })
     .catch((error)=>{
         console.log(error)
     })
 }, 500);
 
+function scrollToBottom(){
+    chatbox.scrollTop=chatbox.scrollHeight;
+}
 
 
 
