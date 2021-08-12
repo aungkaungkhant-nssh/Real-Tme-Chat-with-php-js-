@@ -18,7 +18,7 @@
                         <p><?=$user->status?></p>
                     </div>
                 </div>
-                <a href="" class="logout">Logout</a>
+                <a href="/php/logout.php?unique_id=<?= $_SESSION['unique_id']?>" class="logout">Logout</a>
             </header>
             <div class="search">
                 <span class="text">

@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION["unique_id"])){
+    header("Location: ../login.php");
+    die();
+}
 include_once("./db.php");
 $users=getAll("select * from users");
 $output="";

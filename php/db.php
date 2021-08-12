@@ -25,6 +25,12 @@ function getOne($sql,$params=[]){
     $statement->execute($params);
     return $statement->fetch(PDO::FETCH_OBJ);
 }
+/// query
+function update($sql,$params=[]){
+    global $pdo;
+    $statement=$pdo->prepare($sql);
+    return $statement->execute($params);
+}
 
 
 

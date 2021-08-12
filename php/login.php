@@ -13,6 +13,7 @@ if(!empty($email) && !empty($password)){
         $passwordVerify=password_verify($password,$userEmail->password);
         if($passwordVerify){
             $_SESSION["unique_id"]=$userEmail->unique_id;
+            $condition=update("Update users Set status=? where unique_id=?",["Active Now",$_SESSION["unique_id"]]);
             echo "success";
         }else{
             echo "Incorrect Password!Please Try Again";

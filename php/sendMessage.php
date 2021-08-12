@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION["unique_id"]){
+if(isset($_SESSION["unique_id"])){
     include_once("./db.php");
     $message=$_POST["message"];
     $outgoing=$_POST["outgoing"];
@@ -10,7 +10,7 @@ if($_SESSION["unique_id"]){
        
     }
 }else{
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 
 
